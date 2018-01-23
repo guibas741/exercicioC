@@ -11,9 +11,9 @@ void insereDados(ofstream& arquivo) {
 	for(numero = 1; numero <= 15; numero ++) {
 		arquivo << numero << "\n";
 	}
-    arquivo << "Teste1\n";
-    arquivo << "Nome\n";
-    arquivo << "Teste11\n";
+	arquivo << "Teste1\n";
+	arquivo << "Nome\n";
+	arquivo << "Teste11\n";
 	arquivo << "Frase_teste\n";
 	arquivo << "Teste2\n";
 	arquivo << "O_Teste_22\n";
