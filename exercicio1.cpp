@@ -44,7 +44,7 @@ int main () {
 		system("mkdir tmp");	
 	}
 	
-	ofstream arquivo ("/tmp/exercicio.txt");
+	ofstream arquivo ("./tmp/exercicio.txt");
   
 	if (arquivo.is_open()) {
 		insereDados(arquivo);
