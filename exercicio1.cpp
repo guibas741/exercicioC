@@ -1,6 +1,6 @@
 #include <fstream>
 #include <iostream>
-#include <windows.h>
+
 #include <string>
 
 
@@ -28,24 +28,10 @@ void insereDados(ofstream& arquivo) {
 	arquivo << "Teste100\n";
 }
 
-bool existeDiretorio(const std::string& dirName_in) {
-	
-  DWORD ftyp = GetFileAttributesA(dirName_in.c_str());
-  
-  if (ftyp == INVALID_FILE_ATTRIBUTES) return false; 
-  if (ftyp & FILE_ATTRIBUTE_DIRECTORY) return true;  
-
-  return false;   
-}
-
 int main () {
-	
-	if(!existeDiretorio("tmp")) {
-		system("mkdir tmp");	
-	}
-	
-	ofstream arquivo ("./tmp/exercicio.txt");
-  
+
+	ofstream arquivo ("/tmp/exercicio.txt");
+
 	if (arquivo.is_open()) {
 		insereDados(arquivo);
 		arquivo.close();
@@ -53,3 +39,5 @@ int main () {
 	else cout << "Nao foi possivel abrir o arquivo";
 	return 0;
 }
+
+
